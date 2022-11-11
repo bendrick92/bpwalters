@@ -1,14 +1,46 @@
 module.exports = {
   siteMetadata: {
     title: `Ben Walters`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://bpwalters.com`,
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/pages/projects`,
+      },
     },
-    __key: "pages"
-  }]
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-remote`,
+            options: {
+              maxWidth: 750,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `@matiasfha/gatsby-plugin-frontmatter-featured-image`,
+      options: {
+        image: 'image'
+      },
+    },
+  ],
 };
