@@ -1,10 +1,18 @@
 import './src/styles/global.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Layout } from './src/components';
+
+export const SiteContext = React.createContext({});
 
 export const wrapPageElement = ({ element, props }) => {
   return (
-    <Layout>{element}</Layout>
+    <SiteContext.Provider value={{
+      location: props.location
+    }}>
+      <Layout>
+        {element}
+      </Layout>
+    </SiteContext.Provider>
   );
 };
 

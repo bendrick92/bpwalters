@@ -43,10 +43,35 @@ module.exports = {
           }
         }
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+            transform: 'rotate(-10deg)'
+          },
+          '50%': {
+            transform: 'rotate(10deg)'
+          },
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0px)'
+          }
+        }
+      },
+      animation: {
+        wiggle: 'wiggle .25s ease-in-out 0s 5',
+        'fade-in-up': 'fade-in-up .5s ease-in-out'
+      }
     },
   },
   plugins: [
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animation-delay')
   ],
   darkMode: 'class'
 };

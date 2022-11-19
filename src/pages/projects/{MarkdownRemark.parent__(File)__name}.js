@@ -1,5 +1,6 @@
 import React from 'react';
 import {graphql} from 'gatsby';
+import Fade from 'react-reveal/Fade';
 
 const ProjectPageTemplate = ({ data: { markdownRemark } }) => {
   const project = markdownRemark;
@@ -14,15 +15,19 @@ const ProjectPageTemplate = ({ data: { markdownRemark } }) => {
 
   return (
     <>
-      <div className='mb-14'>
-        <h1 className='text-center'>{project.frontmatter.title}</h1>
-        <div className='flex flex-row justify-center gap-3'>
-          {stackMarkup}
+      <Fade>
+        <div className='mb-14'>
+          <h1 className='text-center'>{project.frontmatter.title}</h1>
+          <div className='flex flex-row justify-center gap-3'>
+            {stackMarkup}
+          </div>
+          <img src={project.frontmatter.image} alt={project.frontmatter.title} className='max-w-3xl mx-auto'/>
         </div>
-        <img src={project.frontmatter.image} alt={project.frontmatter.title} className='max-w-3xl mx-auto'/>
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: project.html }}>
-      </div>
+      </Fade>
+      <Fade>
+        <div dangerouslySetInnerHTML={{ __html: project.html }}>
+        </div>
+      </Fade>
     </>
   );
 };

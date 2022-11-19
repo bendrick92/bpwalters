@@ -1,6 +1,8 @@
 import React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
   const { site } = useStaticQuery(graphql`
@@ -50,9 +52,18 @@ const Projects = () => {
   });
 
   return (
-    <div className='grid grid-cols-3 gap-6'>
-      {projectsMarkup}
-    </div>
+    <>
+      <div className='flex flex-row'>
+        <Fade>
+          <h2 className='text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-blue-500'>Projects</h2>
+        </Fade>
+      </div>
+      <Fade cascade>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {projectsMarkup}
+        </div>
+      </Fade>
+    </>
   );
 };
 

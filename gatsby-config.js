@@ -9,6 +9,7 @@ module.exports = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-anchor-links',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,6 +41,12 @@ module.exports = {
       resolve: `@matiasfha/gatsby-plugin-frontmatter-featured-image`,
       options: {
         image: 'image'
+      },
+    },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `bpwalters.com`,
       },
     },
   ],
