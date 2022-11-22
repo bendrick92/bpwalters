@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "Bens Car Blog"
-image: https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot_2020.png
-slug: "benscarblog"
+featuredImage: https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot_2020.png
 stack: ["Jekyll"]
 sort: 5
 icon: "pen"

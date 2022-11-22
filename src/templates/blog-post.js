@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 const BlogPostTemplate = ({ data: { markdownRemark } }) => {
   const post = markdownRemark;
-  const image = getImage(post.image);
+  const image = getImage(post.featuredImage);
 
   return (
     <>

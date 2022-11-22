@@ -1,9 +1,11 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import Fade from 'react-reveal/Fade';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 
 const ProjectTemplate = ({ data: { markdownRemark } }) => {
   const project = markdownRemark;
+  const image = getImage(project.featuredImage);
 
   const stackMarkup = project.frontmatter.stack.map((tech, i) => {
     return (
@@ -21,7 +23,11 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
           <div className='flex flex-row justify-center gap-3'>
             {stackMarkup}
           </div>
-          <img src={project.frontmatter.image} alt={project.frontmatter.title} className='max-w-3xl mx-auto'/>
+          <GatsbyImage
+            image={image}
+            alt={project.frontmatter.title}
+            className='max-w-3xl mx-auto'
+          />
         </div>
       </Fade>
       <Fade>
@@ -38,8 +44,12 @@ export const projectQuery = graphql`
       html
       frontmatter {
         title
-        image
         stack
+      }
+      featuredImage {
+        childImageSharp {
+          gatsbyImageData
+        }
       }
     }
   }

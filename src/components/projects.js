@@ -10,10 +10,11 @@ const Projects = () => {
     sort: {frontmatter: {sort: ASC}}
   ) {
     projects: nodes {
+      fields {
+        slug
+      }
       frontmatter {
         title
-        image
-        slug
         stack
         icon
         blurb
@@ -32,7 +33,7 @@ const Projects = () => {
         </div>
         <p className='text-base'>{project.frontmatter.blurb}</p>
         <div className='flex justify-end mt-5'>
-          <a href={`projects/` + project.frontmatter.slug} className='px-5 py-3 bg-slate-600 hover:bg-slate-500 text-slate-200 rounded-3xl text-sm no-underline'>
+          <a href={`projects` + project.fields.slug} className='px-5 py-3 bg-slate-600 hover:bg-slate-500 text-slate-200 rounded-3xl text-sm no-underline'>
             Learn More
           </a>
         </div>

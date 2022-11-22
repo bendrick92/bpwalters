@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "Mako"
-image: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
-slug: "mako"
+featuredImage: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
 stack: ["Arduino", "Telematics"]
 sort: 6
 icon: "gauge"

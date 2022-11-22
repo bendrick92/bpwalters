@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "catPi"
-image: https://assets.bpwalters.com/images/catpi.jpg
-slug: "catpi"
+featuredImage: https://assets.bpwalters.com/images/catpi.jpg
 stack: ["Python", "Raspberry Pi"]
 sort: 2
 icon: "cat"

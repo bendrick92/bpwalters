@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "Top Gear Search"
-image: https://assets.bpwalters.com/images/top_gear_search.png
-slug: "top-gear-search"
+featuredImage: https://assets.bpwalters.com/images/top_gear_search.png
 stack: ["Backbone", "Rails"]
 sort: 3
 icon: "magnifying-glass"

@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "MN ST Owners Club"
-image: https://assets.bpwalters.com/images/mnstoc.png
-slug: "mnstoc"
+featuredImage: https://assets.bpwalters.com/images/mnstoc.png
 stack: ["Rails", "Ember"]
 sort: 4
 icon: "comments"

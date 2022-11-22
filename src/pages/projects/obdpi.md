@@ -1,8 +1,7 @@
 ---
 type: "project"
 title: "obdPi"
-image: https://assets.bpwalters.com/images/obdpi.jpg
-slug: "obdpi"
+featuredImage: https://assets.bpwalters.com/images/obdpi.jpg
 stack: ["Python", "Raspberry Pi", "Telematics"]
 sort: 1
 icon: "gauge"

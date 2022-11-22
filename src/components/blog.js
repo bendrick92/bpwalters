@@ -16,10 +16,12 @@ const Blog = () => {
     sort: {frontmatter: {date: DESC}}
   ) {
     posts: nodes {
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
-        slug
       }
       excerpt(pruneLength: 300)
     }
@@ -48,13 +50,13 @@ const Blog = () => {
   const blogMarkup = loadedPosts.map((post, i) => {
     return (
       <div key={`post-${i}`}>
-        <a href={`blog/` + post.frontmatter.slug} className='no-underline'>
+        <a href={`blog` + post.fields.slug} className='no-underline'>
           <h4 className='mt-0'>{post.frontmatter.title}</h4>
         </a>
         <div className='text-sm'>{post.frontmatter.date}</div>
         <p className='text-base'>{post.excerpt}...</p>
         <div className='flex justify-end'>
-          <a href={`blog/` + post.frontmatter.slug} className='text-sm text-slate-300 no-underline'>
+          <a href={`blog` + post.fields.slug} className='text-sm text-slate-300 no-underline'>
             Read More <FontAwesomeIcon icon={faChevronRight} className='ml-1'/>
           </a>
         </div>

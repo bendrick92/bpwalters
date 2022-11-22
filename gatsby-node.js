@@ -76,23 +76,23 @@ const buildBlogPosts = async (graphql, createPage) => {
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
 
   let searchResults = await graphql(`{
-  allMarkdownRemark(
-    filter: {fields: {collection: {eq: "blog"}}}
-    sort: {frontmatter: {date: DESC}}
-    limit: 1000
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
+    allMarkdownRemark(
+      filter: {fields: {collection: {eq: "blog"}}}
+      sort: {frontmatter: {date: DESC}}
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
-  }
-}`);
+  }`);
 
   let blogPosts = searchResults.data.allMarkdownRemark.edges;
 
@@ -111,23 +111,23 @@ const buildProjects = async (graphql, createPage) => {
   const projectTemplate = path.resolve(`./src/templates/blog-post.js`);
 
   let searchResults = await graphql(`{
-  allMarkdownRemark(
-    filter: {fields: {collection: {eq: "projects"}}}
-    sort: {frontmatter: {date: DESC}}
-    limit: 1000
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
+    allMarkdownRemark(
+      filter: {fields: {collection: {eq: "projects"}}}
+      sort: {frontmatter: {date: DESC}}
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
-  }
-}`);
+  }`);
 
   let projects = searchResults.data.allMarkdownRemark.edges;
 
