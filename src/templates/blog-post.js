@@ -30,14 +30,14 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
 };
 
 export const postQuery = graphql`
-  query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
       }
-      image {
+      featuredImage {
         childImageSharp {
           gatsbyImageData
         }
@@ -47,4 +47,3 @@ export const postQuery = graphql`
 `;
 
 export default BlogPostTemplate;
-

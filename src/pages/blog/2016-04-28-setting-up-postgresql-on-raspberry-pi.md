@@ -1,9 +1,8 @@
 ---
 type: blog
 title: Setting up PostgreSQL on Raspberry Pi
-image: http://i.imgur.com/ARMkoJo.png
+featuredImage: http://i.imgur.com/ARMkoJo.png
 date: 2016-04-28
-slug: setting-up-postgresql-on-raspberry-pi
 ---
 
 In this tutorial, we'll be configuring your Raspberry Pi to run an instance of a PostgreSQL database server.

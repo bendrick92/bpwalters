@@ -1,11 +1,18 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import Contact from './contact';
 
 /* FontAwesome */
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faGauge, faCarSide, faCat, faMagnifyingGlass, faComments, faPen, faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowRight,
+  faCarSide,
+  faCat,
+  faComments,
+  faGauge,
+  faMagnifyingGlass,
+  faPen
+} from '@fortawesome/free-solid-svg-icons'
 
 /* FontAwesome */
 library.add(faGauge, faCarSide, faCat, faMagnifyingGlass, faComments, faPen, faArrowRight);

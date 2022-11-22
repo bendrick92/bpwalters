@@ -1,9 +1,8 @@
 ---
 type: blog
 title: Receiving Emails at Custom Domain Addresses Using Mailgun
-image: http://i.imgur.com/koiElWw.png
+featuredImage: http://i.imgur.com/koiElWw.png
 date: 2016-12-30
-slug: setting-up-mailgun-to-receive-emails-at-custom-domain
 ---
 
 Whether you already own or are looking at purchasing a custom domain, (i.e. bpwalters.com), you might like to know that you can set up any number of customized domain email addresses for free!  In this guide, I'll walk you through the process in just a few minutes using Mailgun.

@@ -1,9 +1,8 @@
 ---
 type: blog
 title: Arduino OBD-II Carputer
-image: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
+featuredImage: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
 date: 2017-11-18
-slug: arduino-obd-carputer
 ---
 
 When I published my [Raspberry Pi OBD-II Carputer](/raspberry-pi-obd-ii-carputer) project a little over a year ago, I could never have expected the overwhelmingly positive response it received.

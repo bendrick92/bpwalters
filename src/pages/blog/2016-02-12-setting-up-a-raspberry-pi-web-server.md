@@ -1,9 +1,8 @@
 ---
 type: blog
 title: Setting up a Raspberry Pi Web Server
-image: http://i.imgur.com/lGYFu0o.png
+featuredImage: http://i.imgur.com/lGYFu0o.png
 date: 2016-02-12
-slug: setting-up-a-raspberry-pi-web-server
 ---
 
 Ever since it's introduction early 2012, the Raspberry Pi has proven itself to be an extremely capable little machine.  For less than $30, you get a credit card-sized computer capable of automating home systems, powering robots, or even serving as a basic desktop computer.

@@ -26,16 +26,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images-remote`,
-            options: {
-              maxWidth: 750,
-            },
-          },
-        ],
-      },
     },
     {
       resolve: `@matiasfha/gatsby-plugin-frontmatter-featured-image`,

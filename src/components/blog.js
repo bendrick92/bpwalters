@@ -10,31 +10,21 @@ const Blog = () => {
   const [loadedPosts, setLoadedPosts] = useState([]);
   const [showLoadMore, setShowLoadMore] = useState(false);
 
-  const { markdown } = useStaticQuery(graphql`
-    query {
-      markdown: allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            type: {
-              eq: "blog"
-            }
-          }
-        }
-        sort: {
-          order: DESC, fields: [frontmatter___date]
-        }
-      ) {
-        posts: nodes {
-          frontmatter {
-            title
-            date(formatString: "MMMM D, YYYY")
-            slug
-          }
-          excerpt(pruneLength: 300)
-        }
+  const { markdown } = useStaticQuery(graphql`{
+  markdown: allMarkdownRemark(
+    filter: {frontmatter: {type: {eq: "blog"}}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    posts: nodes {
+      frontmatter {
+        title
+        date(formatString: "MMMM D, YYYY")
+        slug
       }
+      excerpt(pruneLength: 300)
     }
-  `);
+  }
+}`);
 
   useEffect(() => {
     if (markdown && markdown.posts) {
@@ -65,7 +55,7 @@ const Blog = () => {
         <p className='text-base'>{post.excerpt}...</p>
         <div className='flex justify-end'>
           <a href={`blog/` + post.frontmatter.slug} className='text-sm text-slate-300 no-underline'>
-            Read More <FontAwesomeIcon icon={faChevronRight} size='md' className='ml-1'/>
+            Read More <FontAwesomeIcon icon={faChevronRight} className='ml-1'/>
           </a>
         </div>
       </div>
@@ -73,8 +63,10 @@ const Blog = () => {
   });
 
   const loadMoreMarkup = showLoadMore && (
-    <div className='max-w-3xl mx-auto px-5 py-3 mt-10 bg-slate-600 hover:bg-slate-500 rounded-3xl text-slate-200 text-center text-sm hover:cursor-pointer' onClick={() => loadMorePosts()}>
-      Load Older Posts
+    <div className='flex justify-center'>
+      <button className='max-w-3xl mx-auto px-10 py-3 mt-10 bg-slate-600 hover:bg-slate-500 rounded-3xl text-slate-200 text-center text-sm hover:cursor-pointer' onClick={() => loadMorePosts()}>
+        Load Older Posts
+      </button>
     </div>
   );
 

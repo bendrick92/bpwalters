@@ -1,14 +1,13 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {SiteContext} from '../../gatsby-browser';
+import React, {useEffect, useState} from 'react';
 import {Transition} from '@headlessui/react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBarsStaggered, faXmark} from '@fortawesome/free-solid-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {AnchorLink} from 'gatsby-plugin-anchor-links';
+import {useLocation} from '@reach/router';
 
 const Header = () => {
-  const { location } = useContext(SiteContext);
-
+  const location = useLocation();
   const [showMobileNav, toggleMobileNav] = useState(false);
 
   useEffect(() => {
@@ -36,11 +35,11 @@ const Header = () => {
         leaveFrom='opacity-full'
         leaveTo='opacity-0'
       >
-        <div
+        <button
           className='w-full h-full fixed top-0 right-0 bg-black opacity-80 hover:cursor-pointer z-10'
           onClick={() => toggleMobileNav(!showMobileNav)}
         >
-        </div>
+        </button>
       </Transition.Child>
       <Transition.Child
         as='div'

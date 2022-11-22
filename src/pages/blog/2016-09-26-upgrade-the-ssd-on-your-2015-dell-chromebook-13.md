@@ -1,9 +1,8 @@
 ---
 type: blog
 title: Upgrade the SSD on Your 2015 Dell Chromebook 13
-image: http://i.imgur.com/fvU86Al.jpg
+featuredImage: http://i.imgur.com/fvU86Al.jpg
 date: 2016-09-26
-slug: upgrade-the-ssd-on-your-2015-dell-chromebook-13
 ---
 
 I recently purchased a [Dell Chromebook 13 ](http://www.dell.com/us/p/chromebook-13-7310/pd?ref=PD_OC) for personal use, and am absolutely loving it!

@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import Fade from 'react-reveal/Fade';
 
-const ProjectPageTemplate = ({ data: { markdownRemark } }) => {
+const ProjectTemplate = ({ data: { markdownRemark } }) => {
   const project = markdownRemark;
 
   const stackMarkup = project.frontmatter.stack.map((tech, i) => {
@@ -33,8 +33,8 @@ const ProjectPageTemplate = ({ data: { markdownRemark } }) => {
 };
 
 export const projectQuery = graphql`
-  query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
@@ -45,5 +45,4 @@ export const projectQuery = graphql`
   }
 `;
 
-export default ProjectPageTemplate;
-
+export default ProjectTemplate;

@@ -1,38 +1,27 @@
 import React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site: allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            type: {
-              eq: "project"
-            }
-          }
-        }
-        sort: {
-          order: ASC, fields: [frontmatter___sort]
-        }
-      ) {
-        projects: nodes {
-          frontmatter {
-            title
-            image
-            slug
-            stack
-            icon
-            blurb
-          }
-          excerpt(pruneLength: 300)
-        }
+  const { site } = useStaticQuery(graphql`{
+  site: allMarkdownRemark(
+    filter: {frontmatter: {type: {eq: "project"}}}
+    sort: {frontmatter: {sort: ASC}}
+  ) {
+    projects: nodes {
+      frontmatter {
+        title
+        image
+        slug
+        stack
+        icon
+        blurb
       }
+      excerpt(pruneLength: 300)
     }
-  `);
+  }
+}`);
 
   const projectsMarkup = site.projects.map((project, i) => {
     return (
