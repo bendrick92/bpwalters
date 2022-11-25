@@ -10,7 +10,8 @@ import {
   faCarSide,
   faCat,
   faComments,
-  faGauge, faGolfBallTee,
+  faGauge,
+  faGolfBallTee,
   faMagnifyingGlass,
   faPen
 } from '@fortawesome/free-solid-svg-icons'
@@ -22,7 +23,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO/>
-      <div id='page-wrapper' className='min-h-full bg-slate-900 text-white flex'>
+      <div id='page-wrapper' className='min-h-full bg-zinc-900 text-white flex'>
         <div id='page-content' className='max-w-5xl px-8 mx-auto grow flex flex-col'>
           <Header/>
           <main className='min-w-full w-full grow prose prose-slate dark:prose-invert'>

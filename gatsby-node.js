@@ -97,7 +97,6 @@ const buildBlogPosts = async (graphql, createPage) => {
   let blogPosts = searchResults.data.allMarkdownRemark.edges;
 
   blogPosts.forEach((post, index) => {
-console.log(post.node.fields.slug);
     createPage({
       path: 'blog' + post.node.fields.slug,
       component: blogPostTemplate,

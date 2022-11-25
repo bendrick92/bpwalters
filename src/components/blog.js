@@ -3,6 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import {Fade} from 'react-awesome-reveal';
+import Button from './button';
 
 const Blog = () => {
   const pageSize = 3;
@@ -53,8 +54,8 @@ const Blog = () => {
         <a href={`blog` + post.fields.slug} className='no-underline'>
           <h4 className='mt-0'>{post.frontmatter.title}</h4>
         </a>
-        <div className='text-sm'>{post.frontmatter.date}</div>
-        <p className='text-base'>{post.excerpt}...</p>
+        <div className='text-sm font-light'>{post.frontmatter.date}</div>
+        <p className='text-base leading-relaxed'>{post.excerpt}...</p>
         <div className='flex justify-end'>
           <a href={`blog` + post.fields.slug} className='text-sm text-slate-300 no-underline'>
             Read More <FontAwesomeIcon icon={faChevronRight} className='ml-1'/>
@@ -65,17 +66,17 @@ const Blog = () => {
   });
 
   const loadMoreMarkup = showLoadMore && (
-    <div className='flex justify-center'>
-      <button className='max-w-3xl mx-auto px-10 py-3 mt-10 bg-slate-600 hover:bg-slate-500 rounded-3xl text-slate-200 text-center text-sm hover:cursor-pointer' onClick={() => loadMorePosts()}>
+    <div className='mt-10 flex justify-center'>
+      <Button onClick={() => loadMorePosts()}>
         Load Older Posts
-      </button>
+      </Button>
     </div>
   );
 
   return (
     <>
       <Fade>
-        <h2>Blog</h2>
+        <h2>Bloggy Stuff</h2>
       </Fade>
       <Fade cascade>
         <div className='flex flex-col gap-12'>

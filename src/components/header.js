@@ -50,7 +50,7 @@ const Header = () => {
         leave='transform transition ease-in-out duration-500'
         leaveFrom='translate-x-0 opacity-full'
         leaveTo='translate-x-full opacity-0'
-        className='w-auto h-full fixed top-0 right-0 flex flex-col items-end bg-slate-800 z-20'
+        className='w-auto h-full fixed top-0 right-0 flex flex-col items-end bg-zinc-800 z-20'
       >
         <FontAwesomeIcon
           icon={faXmark}
@@ -69,21 +69,20 @@ const Header = () => {
 
   return (
     <>
-      <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
       <header className='relative'>
         <div className='py-8 mx-auto flex items-center justify-between relative'>
-          <div className='flex justify-start items-center lg:flex-1'>
-            <div className='px-1 pt-2 pb-0 mr-3 bg-slate-500 rounded-full overflow-hidden'>
+          <a href='/' className='flex justify-start items-center lg:flex-1 no-underline'>
+            <div className='px-1 pt-2 pb-0 mr-3 bg-blue-500 rounded-full overflow-hidden'>
               <StaticImage
                 src='../assets/images/bpwalters.png'
                 alt=''
-                className='w-9 h-9'
+                width={40}
+                height={40}
+                loading='eager'
+                placeholder='none'
               />
             </div>
-            <a href='/' className='no-underline'>
-              <h1 className='text-2xl font-semibold'>Ben Walters</h1>
-            </a>
-          </div>
+          </a>
           <FontAwesomeIcon
             icon={faBarsStaggered}
             size='xl'

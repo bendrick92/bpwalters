@@ -3,7 +3,7 @@ title: "Bens Car Blog"
 featuredImage: https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot_2020.png
 stack: ["Jekyll"]
 sort: 5
-icon: "pen"
+icon: "car-side"
 blurb: "Jekyll-based blog documenting car things"
 ---
 

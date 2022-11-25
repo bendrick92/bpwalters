@@ -1,15 +1,17 @@
 import React from 'react';
 import {Fade} from 'react-awesome-reveal';
+import {AnchorLink} from 'gatsby-plugin-anchor-links';
 
 const Intro = () => {
   return (
     <>
       <Fade>
         <div>
-          <h2>I'm Ben - A web developer from WI.</h2>
-          <p>I currently work as a <strong>Lead Software Engineer</strong> at Milwaukee Tool.</p>
-          <p>A few things I'm passionate about include clean design, creative problem solving, and cheese curds.</p>
-          <p>I spend my free time making sawdust, changing diapers, and blogging over at <a href='https://benscarblog.com' target='_blank' rel='noreferrer'>Bens Car Blog</a>.</p>
+          <p>Hey there! My name is</p>
+          <h2 className='mt-5 mb-8 text-7xl font-superbold'>Ben Walters</h2>
+          <p>and I'm a <a href='https://linkedin.com/in/bpwalters' target='_blank' rel='noreferrer'><strong>Lead Software Engineer</strong></a> from Milwaukee, WI.</p>
+          <p>I'm also a full-time dad, part time woodworker, and sometimes tinkerer - more on that down <AnchorLink to='#projects'>here</AnchorLink>.</p>
+          <p>If you have questions about any of my work or just wanna chat, <AnchorLink to='#contact'>hit me up</AnchorLink>!</p>
         </div>
       </Fade>
     </>

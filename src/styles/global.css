@@ -7,9 +7,19 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
 }
 
 div[role="group"][tabindex] {
   height: 100%;
+}
+
+.font-superbold {
+  font-weight: 800;
 }
