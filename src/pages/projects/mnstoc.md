@@ -1,5 +1,4 @@
 ---
-type: "project"
 title: "MN ST Owners Club"
 featuredImage: https://assets.bpwalters.com/images/mnstoc.png
 stack: ["Rails", "Ember"]

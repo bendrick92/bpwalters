@@ -14,7 +14,7 @@ In looking over his plans, I decided there were a few additional features I'd ad
 * **Camera integration** - After all, if I was going to be operating the feeder remotely, I'd need some confirmation that the food actually dispensed
 * **Custom enclosure** - Our younger cat has a reputation for being a bit of an ass, so some sort of case/container would be absolutely necessary to keep him from tipping it all over
 
-#### Parts List
+## Parts List
 
 The list of the parts I used loosely followed David's original documentation, but for reference here's a general list of the supplies I used:
 
@@ -25,7 +25,7 @@ The list of the parts I used loosely followed David's original documentation, bu
 * [Adafruit 1/4 Perma-Proto Breadboard](https://www.adafruit.com/products/1608)
 * [FeeTech Continuous Rotation Servo](https://www.adafruit.com/products/154)
 
-#### Putting It All Together (Part I): Getting The Servo Mounted
+## Putting It All Together (Part I): Getting The Servo Mounted
 
 Since the cereal dispenser David utilized was no longer available, I decided to go with the aforementioned Zevro dispenser instead.  The main reasons I chose this dispenser were the large reservoir, flexible silicone paddles, and plastic construction.  The use of flexible paddles on the dispenser wheel meant there was little chance for food to get jammed, while the plastic construction meant it would be easy to modify to suit my needs.
 
@@ -45,7 +45,7 @@ With that done, I got initial impressions from the primary stakeholders:
 
 The excitement was palpable.  Anyways, see the masking tape holding the lid onto the reservoir?  Yeah that became immediately necessary after the younger one discovered how top heavy the dispenser was.  A rethink was in order...
 
-#### Putting It All Together (Part II): The Hamper
+## Putting It All Together (Part II): The Hamper
 
 After a few beers and a stroll down the storage container aisle at Target, I came across a nice looking plastic clothes hamper on sale.  With it's mesh design (perfect for mounting the dispenser) and fancy looks, I figured it would be as good a place as any to start.
 
@@ -65,7 +65,7 @@ This design got a more enthusiastic response...
 
 The food would dispense just fine, but the sharp edges of the PVC joining together was catching a large amounts of food.  The cats remedied this issue by discovering they could fit nearly their entire arms up the pipes to grab the trapped food, but I knew the design would need yet another rethink.
 
-#### Putting It All Together (Part III): Break Out the Power Tools
+## Putting It All Together (Part III): Break Out the Power Tools
 
 After several days of strong contemplation and many more beers, I decided it would be most effective to build an entirely custom enclosure for the reservoir.
 
@@ -97,7 +97,7 @@ With that done, I assembled the rest of the container and installed the Pi, serv
 
 ![The reservoir installed](http://i.imgur.com/6K9ynKu.jpg)
 
-#### Final Touches
+## Final Touches
 
 For testing, I used a breadboard and jumper wires for temporary connections:
 
@@ -119,7 +119,7 @@ Installed everything in the back of the enclosure...
 
 <iframe width="560" height="500" src="https://www.youtube.com/embed/WC-2G3SU3-Q" frameborder="0" allowfullscreen style="margin: 0 auto"></iframe>
 
-#### The Code
+## The Code
 
 The Python scripts I'm utilizing are available on Github [here](https://github.com/bendrick92/catpi), but for simplicity's sake, here's a high-level overview of the functionality:
 
@@ -143,12 +143,12 @@ Finally, the code utilizes the Dropbox API to synchronize the Dropbox folder wit
 
 Currently I am updating the JSON file manually, but am working on a Backbone.js administration page to make file management/updating much easier.
 
-#### Closing Thoughts
+## Closing Thoughts
 
 There's tons of room for improvement, but overall I'm very happy with the results.
 
 David's [blog post](http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/) was invaluable in providing the motivation/inspiration for this project, so be sure to check him out if you haven't already.
 
-Thanks for reading, and drop a comment below if you have any questions/want more information on this project!  I'll try to keep it updated as I make changes/improvements to the catPi!
+Thanks for reading!
 
 ![Just making sure it's working...](http://i.imgur.com/mgi5P1J.jpg)

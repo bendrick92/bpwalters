@@ -28,7 +28,7 @@ Beyond the web server-specific functions, a Pi with dynamic DNS set up can be us
 
 With all that out of the way, let's get started!
 
-#### Step One: Set up your Pi
+## Step One: Set up your Pi
 
 The first step in setting up any new Raspberry Pi is to format an SD card for installing the Raspbian OS on. If you purchased/your Pi came with a pre-formatted NOOBS SD card, you can skip these first few steps as your SD card already has Raspbian ready to go.
 
@@ -41,7 +41,7 @@ Next go ahead and complete the Raspbian installation, making sure to enable SSH 
 NOTE: If you chose to install the full Raspbian OS and your first Raspberry Pi boot completes without any prompts, it will eventually end you on the GUI desktop. To ensure SSH is enabled from here, click "Menu" in the top left and navigate to "Preferences > Raspberry Pi Configuration". In the window that opens, switch to the "Interfaces" tab and make sure "SSH" is set to "enabled".
 
 
-#### Step Two: Setting Up LAMP
+## Step Two: Setting Up LAMP
 
 LAMP stands for Linux, Apache, MySQL, and PHP. It is a term commonly used to refer to a software stack for development and deployment of web applications and web sites on servers.
 
@@ -99,7 +99,7 @@ Now that MySQL is installed and configured, we'll install PHP:
 
 Once the PHP installation is finished, you're ready to configure Apache to serve your pages, bypassing your ISP's restrictions on port 80.
 
-#### Step Three: Configure Apache
+## Step Three: Configure Apache
 
 Now that all parts of our LAMP stack are present, let's set up Apache to listen on port 5050 instead of the default 80.
 
@@ -129,7 +129,7 @@ Restart Apache again to apply the changes:
 
 Confirm that your changes are working by navigating to your Pi's IP address in your browser again, only this time append ":5050" to the URL (i.e. http://192.168.0.106:5050).
 
-#### Step 4: Dynamic DNS
+## Step 4: Dynamic DNS
 
 The next step is to set up Dynamic DNS for a domain name of your choosing. By default, your ISP assigns your web server a random, public IP address (ex. 11.222.33.444). Unfortunately, in most cases they will frequently reassign this IP address, making it very difficult to maintain a reliable connection to your web server. Thankfully Dynamic DNS allows us to bypass this issue altogether by having your new web server regularly report and update it's own public IP address in your domain name's DNS record!
 
@@ -163,7 +163,7 @@ After updating your domain record with the Cloudflare-provided nameservers, it s
 
 Awesome! Your domain name record and DNS provider should now be configured and ready to accept DNS updates from your web server.
 
-#### Step 5: DDNS Configuration on Apache
+## Step 5: DDNS Configuration on Apache
 
 First, we'll need to install 'ddclient', a DDNS client for Apache on your web server. Run the following command:
 
@@ -218,7 +218,7 @@ To test our configuration, and set the initial values, run:
 You should see a list of debug commands followed by a "SUCCESS" line reporting that your server's current IP was set on your DNS record.
 
 
-#### Step 6: Port Forwarding Setup
+## Step 6: Port Forwarding Setup
 
 The last step is to configure your home router to forward HTTP requests to port 5050.  The steps for this will vary greatly depending on your brand and model of router, but for simplicity I'm going to run through the setup steps for my **Netgear Nighthawk R6900**.
 
@@ -243,5 +243,3 @@ Let's quick recap what we've accomplished.
 * Finally, we set up a port forwarding rule on our router to forward external port 80 HTTP requests to port 5050 of our Pi server.
 
 NOTE: It may take a few minutes to a few hours for your DNS record to update and correctly resolve requests to your domain name to the public IP of your web server, so be patient.
-
-Please feel free to share any questions/comments you may have below!

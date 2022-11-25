@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -27,6 +28,7 @@
     "gatsby-cli": "^5.0.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-manifest": "^5.1.0",
     "gatsby-plugin-mdx": "^5.0.0",
     "gatsby-plugin-plausible": "0.0.7",
     "gatsby-plugin-sharp": "^5.0.0",
@@ -34,11 +36,12 @@
     "gatsby-transformer-remark": "^6.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.1.0",
     "react-dom": "^18.2.0",
-    "react-reveal": "^1.2.2",
     "tailwindcss-animation-delay": "^1.0.7"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "gatsby-plugin-postcss": "^6.0.0",

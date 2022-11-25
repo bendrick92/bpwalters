@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import {GatsbyImage, getImage} from 'gatsby-plugin-image';
-import Fade from 'react-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 
 const BlogPostTemplate = ({ data: { markdownRemark } }) => {
   const post = markdownRemark;
@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
         <div className='mb-14'>
           <p className='text-center'>{post.frontmatter.date}</p>
           <h1 className='text-center'>{post.frontmatter.title}</h1>
-          <div className='max-w-3xl mx-auto flex justify-center'>
+          <div className='max-w-3xl mx-auto mb-10 flex justify-center'>
             <GatsbyImage
               image={image}
               alt={post.frontmatter.title}

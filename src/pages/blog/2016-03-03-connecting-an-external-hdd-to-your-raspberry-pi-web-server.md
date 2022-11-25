@@ -17,7 +17,7 @@ Before we get started, you'll need to collect a few items we're going to use:
 
 Now that we've got everything we need, let's get started!
 
-#### Step 1: Connect Hub and Drive to the Pi
+## Step 1: Connect Hub and Drive to the Pi
 
 The first step is to connect up the powered USB hub.
 
@@ -29,7 +29,7 @@ Next, let's connect your external drive to the hub.  At this point, if your driv
 
 Now we can go ahead and configure the HDD to play nice with Raspbian.
 
-#### Step 2: Format HDD to 'ext4' and Mount
+## Step 2: Format HDD to 'ext4' and Mount
 
 The recommended file format for Linux drives is 'ext4'.  If your drive isn't already formatted to 'ext4', don't worry - it's easy enough to do from within the Pi's terminal.  First, make sure your newly connected drive is detected:
 
@@ -87,7 +87,7 @@ Save and confirm your changes by typing 'Ctrl+X', 'y', and finally 'Enter'.
 
 Now that our drive is formatted, and set to auto-mount at startup, we can install Samba to manage our files remotely.
 
-#### Step 3: Installing and Configuring Samba
+## Step 3: Installing and Configuring Samba
 
 Before installing Samba, let's make sure your packages are up-to-date:
 
@@ -143,7 +143,7 @@ Before moving on, let's quick recap what we've accomplished so far:
 * Installed and configured Samba to recognize our new drive
 * Created 'smbuser' to access our new Samba share
 
-#### Step 4: Create a Symbolic Link
+## Step 4: Create a Symbolic Link
 
 It's super easy to serve the files you have stored on your USB drive through your Apache server using a symbolic link.  Simply enter the following:
 
@@ -151,7 +151,7 @@ It's super easy to serve the files you have stored on your USB drive through you
 
 And that's it!  Your USB drive's files should now be accessible via your server's "/usb" directory (ex. http://123.456.7.890/usb).
 
-#### Step 5: Connect to your Samba Share in Windows/Linux
+## Step 5: Connect to your Samba Share in Windows/Linux
 
 To access your new file share via Windows/Linux, you'll first want to grant your new Samba user permission to read/write files in the USB drive:
 
@@ -190,5 +190,3 @@ NOTE: To install Filezilla on Linux, simply run:
 `sudo apt-get install filezilla`
 
 And that's it!  Congratulations!  You're all set to serve content from your USB hard drive on your Raspberry Pi web server.
-
-If you have any questions, comments, or suggestions, please feel free to leave a comment below!

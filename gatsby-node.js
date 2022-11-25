@@ -77,7 +77,7 @@ const buildBlogPosts = async (graphql, createPage) => {
 
   let searchResults = await graphql(`{
     allMarkdownRemark(
-      filter: {fields: {collection: {eq: "blog"}}}
+      filter: {fileAbsolutePath: {regex: "/(blog)/"}}
       sort: {frontmatter: {date: DESC}}
       limit: 1000
     ) {
@@ -97,6 +97,7 @@ const buildBlogPosts = async (graphql, createPage) => {
   let blogPosts = searchResults.data.allMarkdownRemark.edges;
 
   blogPosts.forEach((post, index) => {
+console.log(post.node.fields.slug);
     createPage({
       path: 'blog' + post.node.fields.slug,
       component: blogPostTemplate,
@@ -108,11 +109,11 @@ const buildBlogPosts = async (graphql, createPage) => {
 };
 
 const buildProjects = async (graphql, createPage) => {
-  const projectTemplate = path.resolve(`./src/templates/blog-post.js`);
+  const projectTemplate = path.resolve(`./src/templates/project.js`);
 
   let searchResults = await graphql(`{
     allMarkdownRemark(
-      filter: {fields: {collection: {eq: "projects"}}}
+      filter: {fileAbsolutePath: {regex: "/(projects)/"}}
       sort: {frontmatter: {date: DESC}}
       limit: 1000
     ) {

@@ -7,7 +7,7 @@ date: 2016-06-25
 
 *PLEASE NOTE: This blog post is meant to be a conceptual overview of the history of this project.  If you are looking for the more technical details on getting your own Raspberry Pi carputer up-and-running, please see the official obdPi documentation [here](https://bendrick92.github.io/obdPi/).*
 
-#### Introduction
+## Introduction
 During the summer of 2015, I was looking into boost gauges for my Fiesta ST, and came across a review for the 2016 Subaru WRX.  In the video, they mentioned the WRX's central multi-function screen which displays various data like boost, mpg, etc.
 
 ![2016 WRX screen](http://i.imgur.com/HDfbu7T.jpg)
@@ -30,7 +30,7 @@ Having installed and messed around with Torque Pro on my phone, I had come to th
 
 Some quick searching revealed a number of projects that did something similar, but (much like the multi-function WRX display) I was looking to pull data beyond just boost pressure.  The OBD-II interface provides standardized, straightforward access to a wealth of vehicle data, beyond just boost pressure.
 
-#### Research
+## Research
 
 I was able to locate a number of projects online that pursued a similar goal of an in-car computer displaying diagnostic/status data.  The first and most well documented was put together by [CowFish Studios](http://www.cowfishstudios.com/blog/obd-pi-raspberry-pi-displaying-car-diagnostics-obd-ii-data-on-an-aftermarket-head-unit).  Unfortunately, their approach output to a multi-color LCD, and utilized an outdated Python OBD-II library.
 
@@ -38,7 +38,7 @@ Next, I came across [CarBerry's](http://www.carberry.it/) quality looking offeri
 
 There were a couple other projects that appeared either outdated, or lacked any sort of useful documentation, so I decided to just move forward using the best aspects of each of the projects I'd found as an inspiration/guideline.
 
-#### Supplies
+## Supplies
 
 Right around the time I began this project, the Raspberry Pi 2 was just coming to market, so I went ahead and picked up a [Vilros Raspberry Pi 2 Ultimate Starter Kit](https://www.amazon.com/gp/product/B01CYWE20U/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01CYWE20U&linkCode=as2&tag=bpwaltersblog-20&linkId=3d53ca7a17d27431dd8980487035cfd6) (link is to newer Pi 3 kit).  Having never done any sort of electrical wiring before, I figured the kit had (almost) everything I'd need to get started with GPIO wiring the Raspberry Pi.
 
@@ -54,7 +54,7 @@ In addition to the Vilros starter kit, I picked up the following:
 
 *NOTE: If ordering the aforementioned items yourself, don't skimp on a quality OBD-II Bluetooth adapter.  The one listed was actually my second, as the first ended up being a cheap knock-off.*
 
-#### Wiring the OLED
+## Wiring the OLED
 
 After getting the basics of wiring with the Pi down with a few tutorials provided by the starter kit, I decided to jump straight into wiring up an LCD.
 
@@ -70,7 +70,7 @@ Unfortunately, my first efforts resulted in a fried display.  One quick chat wit
 
 *For a detailed walk-through and diagrams on wiring an OLED display, please see the [obdPi documentation](http://bendrick92.github.io/obdPi/wiring/).*
 
-#### Bluetooth and Serial Connections
+## Bluetooth and Serial Connections
 
 Now that I had working display, I needed to configure Raspbian to communicate with the Bluetooth OBD-II adapter.
 
@@ -80,7 +80,7 @@ In short, the Bluetooth OBD-II adapter is paired with the Bluetooth USB adapter 
 
 Finally, using entries in the `/etc/rc.local` startup file, I was able to configure this pairing to run automatically.
 
-#### Python Scripts
+## Python Scripts
 
 Now that I had a working display and connections, I needed to write some Python scripts to pull the OBD-II data from the car.
 
@@ -98,7 +98,7 @@ Leveraging python-OBD, I was quickly up-and-running with a working script, outpu
 
 As you can see by the flashing display, my code was still far from perfect.  However, I was prepared to tackle the next challenge - powering the Raspberry Pi in-car.
 
-#### Pi Power
+## Pi Power
 
 I had read mentions of a company called Mausberry in numerous Raspberry Pi tutorials, so I went ahead and order one of their 2A [car-based power supplies](http://mausberry-circuits.myshopify.com/collections/car-power-supply-switches).
 
@@ -132,7 +132,7 @@ As a result of the excellent documentation, I had the UPS configured and working
 
 ![Imgur](http://i.imgur.com/p4mE2g3.jpg)
 
-#### To the Car!
+## To the Car!
 
 Since I would no longer be utilizing the Mausberry circuit's built-in voltage converter, I had to find an alternative solution for stepping the 12V power source from the car down to a more Pi-friendly 5V.  I found [this](https://www.amazon.com/gp/product/B00QTJWRFW/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) regulator on Amazon, and wired everything up:
 
@@ -154,7 +154,7 @@ Finally, it was time for a test drive!
 
 HALLELUJAH!  With the entire system working as intended, I left it installed for a few weeks of testing and, while there are certainly a few bugs to work out, ran into no major issues!
 
-#### OLED Housing
+## OLED Housing
 
 With the hard work done, I decided to tackle the last "piece of the puzzle" per say.
 
@@ -172,7 +172,7 @@ The visiblity of the green OLED PCB against the black of the car's dashboard was
 
 ![Installed in the car](http://i.imgur.com/Pl5p7bu.jpg)
 
-#### What's Next
+## What's Next
 
 This entire experience has been a great lesson.  What started as an afternoon brainstorm eventually became one of the most frustrating and time-consuming projects I've ever worked on.  There were many late nights in the garage (both freezing and baking-hot), on my laptop, cursing Python and thinking it was a lot harder than it should be.
 
@@ -180,7 +180,7 @@ This entire experience has been a great lesson.  What started as an afternoon br
 
 To some, it may seem trivial or "simple".  But to me, it's become a lesson in not only patience, but a testament to the benefit of sticking with a project - no matter how many times you might fail.  Because the end results are always worth it.
 
-I'm very excited for the future of this project, and I'm already putting together a huge list of "to-dos".  If you have any suggestions, please feel free to leave them in the comments below!
+I'm very excited for the future of this project, and I'm already putting together a huge list of "to-dos".
 
 Thanks for reading!
 

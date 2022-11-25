@@ -1,5 +1,4 @@
 ---
-type: "project"
 title: "Mako"
 featuredImage: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
 stack: ["Arduino", "Telematics"]

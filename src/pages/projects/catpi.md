@@ -1,5 +1,4 @@
 ---
-type: "project"
 title: "catPi"
 featuredImage: https://assets.bpwalters.com/images/catpi.jpg
 stack: ["Python", "Raspberry Pi"]

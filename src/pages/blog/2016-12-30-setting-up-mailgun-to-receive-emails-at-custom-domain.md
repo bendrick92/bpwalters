@@ -7,7 +7,7 @@ date: 2016-12-30
 
 Whether you already own or are looking at purchasing a custom domain, (i.e. bpwalters.com), you might like to know that you can set up any number of customized domain email addresses for free!  In this guide, I'll walk you through the process in just a few minutes using Mailgun.
 
-#### Setting Up Your Mailgun Account
+## Setting Up Your Mailgun Account
 
 The first thing you'll want to do is sign up for a free Mailgun account [here](http://www.mailgun.com/).
 
@@ -17,7 +17,7 @@ NOTE: You can leave the "Add payment info now" box unchecked - Mailgun lets you 
 
 Once you've completed the sign up process, you'll receive a confirmation email.  Follow the link in the email, and that's it!  You're all set up and configured to start using Mailgun.  Now we'll add the link to your custom domain.
 
-#### Linking Mailgun to Your Custom Domain
+## Linking Mailgun to Your Custom Domain
 
 First, we'll need to add a new domain in Mailgun.  To do this, go to the "Domains" section of your Mailgun account:
 
@@ -37,7 +37,7 @@ NOTE: Once you've added the aforementioned DNS entries, there may be delay befor
 
 Once your settings are verified by Mailgun (this can be manually checked by clicking "Check DNS Records Now" under "Domain Verification & DNS" on the domain's settings screen), you're ready to roll!
 
-#### Forwarding to A Separate Email Account
+## Forwarding to A Separate Email Account
 
 In my case, I want emails sent to my domain's email address(es) to be forwarded to my main Gmail account.  Setting this up yourself is remarkably easy.
 
@@ -56,5 +56,3 @@ NOTE: Sending the email from the same account that is to be forwarded to didn't 
 If you encounter any issues, try adding the defined "Forward" email address (i.e. the Gmail/other account) as an "Authorized Recipient" in Mailgun.  This can be done from the [main dashboard](https://mailgun.com/app/dashboard) - just click the "Authorized Recipients" button towards the bottom of the page, and enter the address of the email account you'd like to authorize.  You'll receive an email to confirm you have access to the account, and wish to start receiving emails from Mailgun.
 
 And that's it!  You are now configured to receive emails using your custom domain name!  If you'd like to add additional domain name emails, you can always define more "Routes" using the same process as above.
-
-If you have any questions or comments, feel free to leave them down below!

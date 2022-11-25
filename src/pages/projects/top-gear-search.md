@@ -1,5 +1,4 @@
 ---
-type: "project"
 title: "Top Gear Search"
 featuredImage: https://assets.bpwalters.com/images/top_gear_search.png
 stack: ["Backbone", "Rails"]

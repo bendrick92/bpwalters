@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
-import Fade from 'react-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 
 const Blog = () => {
   const pageSize = 3;
@@ -75,7 +75,7 @@ const Blog = () => {
   return (
     <>
       <Fade>
-        <h2 className='text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-blue-500'>Blog</h2>
+        <h2>Blog</h2>
       </Fade>
       <Fade cascade>
         <div className='flex flex-col gap-12'>

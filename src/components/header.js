@@ -5,6 +5,7 @@ import {faBarsStaggered, faXmark} from '@fortawesome/free-solid-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {AnchorLink} from 'gatsby-plugin-anchor-links';
 import {useLocation} from '@reach/router';
+import {StaticImage} from 'gatsby-plugin-image';
 
 const Header = () => {
   const location = useLocation();
@@ -71,9 +72,16 @@ const Header = () => {
       <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
       <header className='relative'>
         <div className='py-8 mx-auto flex items-center justify-between relative'>
-          <div className='flex justify-start lg:flex-1'>
+          <div className='flex justify-start items-center lg:flex-1'>
+            <div className='px-1 pt-2 pb-0 mr-3 bg-slate-500 rounded-full overflow-hidden'>
+              <StaticImage
+                src='../assets/images/bpwalters.png'
+                alt=''
+                className='w-9 h-9'
+              />
+            </div>
             <a href='/' className='no-underline'>
-              <h1 className='text-xl font-semibold'>Ben Walters</h1>
+              <h1 className='text-2xl font-semibold'>Ben Walters</h1>
             </a>
           </div>
           <FontAwesomeIcon

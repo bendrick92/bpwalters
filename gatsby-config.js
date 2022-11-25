@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Ben Walters`,
+    description: 'Personal website, portfolio, and blog of Ben Walters',
+    image: 'src/assets/images/bpwalters.png',
     siteUrl: `https://bpwalters.com`,
   },
   plugins: [
@@ -39,5 +41,11 @@ module.exports = {
         domain: `bpwalters.com`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/images/bpwalters.png',
+      },
+    }
   ],
 };

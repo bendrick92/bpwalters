@@ -11,7 +11,7 @@ Through dozens of comments, emails, and even a few in-person discussions at tech
 
 Unfortunately, following my original post last June, development on the obdPi project fizzled out.  I quickly realized there were a number of important limitations when considering the Raspberry Pi as a carputer, specifically boot time and power management.
 
-#### Raspberry Pi Limitations
+## Raspberry Pi Limitations
 
 The main issue with my original obdPi approach is the time required to boot the system when the vehicle is powered on.
 
@@ -23,7 +23,7 @@ The more I thought about the problem, the more I realized the Pi might be overki
 
 With a bit more research, I discovered a great community supporting the Arduino platform.  I dug a bit deeper, and almost immediately the Arduino became an appealing alternative to the Pi; specifically for its simplicity and near-instantaneous boot time.
 
-#### Pi vs. Arduino
+## Pi vs. Arduino
 
 When comparing the Pi to the Arduino, they each have their own strengths/weaknesses.
 
@@ -31,7 +31,7 @@ Simply put, the Pi is designed to support a full operating system, but lacks bui
 
 In the case of obdPi, the ability to extend the functionality of the system beyond basic performance monitoring has always been an appealing option.  However, considering the tradeoff of longer boot times (a major factor in a carputer), the Arudino certainly seemed to fit my needs much better.
 
-#### Exploring Arduino Options
+## Exploring Arduino Options
 
 I decided to start by ordering up an [Arduino Uno R3](http://amzn.to/2vW5m6E) from Amazon.  With nothing more than a basic [USB 2.0](http://amzn.to/2ww2EGv) cable and the Arduino IDE on my laptop, I had the little Uno up and running in no time.
 
@@ -43,7 +43,7 @@ As I started researching existing Arduino OBD-II projects, I came across [Freema
 
 ![Freematics UART V2](https://assets.bpwalters.com/images/professional_blog/freematics_uart_adapter.jpg)
 
-#### Freematics Makes It Easy
+## Freematics Makes It Easy
 
 Utilizing nothing more than the OBD-II interface, the V2 adapter provides a single cable solution for both power and OBD-II data.  Out of the box, it's designed to work with Freematics' [ArduinoOBD](https://github.com/stanleyhuangyc/ArduinoOBD) library.
 
@@ -80,7 +80,7 @@ As you can see, this is *loads* easier than configuring a Bluetooth OBD-II conne
 
 With the easy stuff out of the way, I knew it would be necessary to implement some sort of external display.  Initially I considered re-using the 16x2 OLED from the obdPi project, but realized that would require a whole extra set of cabling to be routed somewhere in the car.
 
-#### Getting in Touch
+## Getting in Touch
 
 I pulled back up Freematics' site and noticed they offer a [3.5" Touch LCD Shield](https://freematics.com/store/index.php?route=product/product&path=59&product_id=70) for the Arduino Mega:
 
@@ -101,7 +101,7 @@ Thanks to a few sample sketches on the [Freematics Github](https://github.com/st
 
 Freematics had done pretty much all the heavy lifting at this point, and I had a fully functional Arduino OBD-II performance monitor ready for use in the car.  Rather than stop there, however, I decided to dig deeper into the Freematics code and figure out if I could hack the display into a cooler GUI-based layout.
 
-#### COBB Accessport
+## COBB Accessport
 
 With obdPi, my original intentions had been to eventually integrate the entire system into my car's dashboard.  However, thanks to the Freematics LCD shield, I realized there was an opportunity to develop a standalone performance monitor similar to COBB Tuning's Accessport.
 
@@ -113,7 +113,7 @@ While I'm not brave enough to dabble in the dark art of ECU tuning myself, I do 
 
 Having already sorted the hardware side of things, I turned my attention to the software.  While Freematics' Arduino libraries already provide a variety of performance data, I wasn't satisfied with the basic layout and GUI.
 
-#### Gettin' GUI With It
+## Gettin' GUI With It
 
 I started by dissecting the example scripts from Freematics' Github repo, and quickly realized there was a bunch of extraneous code in a number of the libraries (for my purposes).  In addition, while there seemed to be a solid foundation for extended functionality, the original code didn't easily allow for things like a rotated screen or a page-based layout.
 
@@ -139,7 +139,7 @@ The case fit perfectly, and with the pin headers left exposed and flush with the
 
 With the case sorted, I decided to utilize an [Anker air vent magnetic phone mount](http://amzn.to/2hKtBRd) for mounting the Arduino in the car.  This would allow me to reposiiton the Arduino as many times as I like, and thanks to the new case, I had a surface on which I could safely mount one of the adhesive magnetic patches.
 
-#### Moar Power!
+## Moar Power!
 
 Because the Freematics adapter utilizes the OBD-II 12V pin to power the Arduino (a constant 12V source), I needed to figure out how I could power the Arduino off when the car turned off.  After considering a few software options, I decided to build an inline hardware kill switch.  I ordered a few [LED inline power switches](http://amzn.to/2zRB5s0), chopped the ends off, added a pair of additional wires (to extend the Freematics data lines) and terminated both ends in matching male/female 1x4 connector housings.
 
@@ -159,7 +159,7 @@ Killswitch sorted, I was ready to install everything in the car.  Thanks to the 
 
 In the video you can see the working boost and RPM gauges!  Needless to say I was amazed and excited I had gotten this far.  The only thing left to do was clean up the code and add a few more gauges!
 
-#### Work in Progress
+## Work in Progress
 
 Unfortunately, life happened (we moved houses) and I was forced to sideline the project for a number of months.  By the time I got the time and inspiration to pick the project back up, I found myself in a position to sell my Fiesta ST and move up to a Subaru WRX - the car that started this whole carputer thing in the first place.  While I cover that experience in detail over on my [other blog](https://benscarblog.com/buying-a-wrx/), I realized I was moving into a car with the kind of functionality and gauges I had been [hacking together](/raspberry-pi-obd-ii-carputer/) in my free time in the months prior.  This made me a little sad, as I realized I no longer had a *need* for the Arduino carputer.
 

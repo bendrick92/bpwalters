@@ -1,5 +1,4 @@
 ---
-type: "project"
 title: "obdPi"
 featuredImage: https://assets.bpwalters.com/images/obdpi.jpg
 stack: ["Python", "Raspberry Pi", "Telematics"]
