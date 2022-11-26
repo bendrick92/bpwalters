@@ -76,7 +76,7 @@ const Blog = () => {
   return (
     <>
       <Fade>
-        <h2>Bloggy Stuff</h2>
+        <h2>Blog</h2>
       </Fade>
       <Fade cascade>
         <div className='flex flex-col gap-12'>

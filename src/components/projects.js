@@ -46,7 +46,7 @@ const Projects = () => {
     <>
       <div className='flex flex-row'>
         <Fade>
-          <h2>Fun Stuff</h2>
+          <h2>Projects</h2>
         </Fade>
       </div>
       <Fade cascade>

@@ -35,7 +35,7 @@ const Contact = () => {
               <Button
                 type='submit'
               >
-                <FontAwesomeIcon icon={faPaperPlane} size='middle' className='mr-3'/>
+                <FontAwesomeIcon icon={faPaperPlane} className='mr-3'/>
                 Send
               </Button>
             </div>

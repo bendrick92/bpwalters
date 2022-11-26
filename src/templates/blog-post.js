@@ -10,10 +10,10 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
   return (
     <>
       <Fade>
-        <div className='mb-14'>
-          <p className='text-center'>{post.frontmatter.date}</p>
-          <h1 className='text-center'>{post.frontmatter.title}</h1>
-          <div className='max-w-3xl mx-auto mb-10 flex justify-center'>
+        <div className='my-16 flex flex-col gap-10'>
+          <h1 className='m-0 text-center'>{post.frontmatter.title}</h1>
+          <span className='text-center'>{post.frontmatter.date}</span>
+          <div className='text-center'>
             <GatsbyImage
               image={image}
               alt={post.frontmatter.title}
@@ -39,7 +39,7 @@ export const postQuery = graphql`
       }
       featuredImage {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(width: 750)
         }
       }
     }

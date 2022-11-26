@@ -72,7 +72,7 @@ const Header = () => {
       <header className='relative'>
         <div className='py-8 mx-auto flex items-center justify-between relative'>
           <a href='/' className='flex justify-start items-center lg:flex-1 no-underline'>
-            <div className='px-1 pt-2 pb-0 mr-3 bg-blue-500 rounded-full overflow-hidden'>
+            <div className='px-1 pt-2 pb-0 mr-3 bg-blue-500 rounded-full overflow-hidden isolate'>
               <StaticImage
                 src='../assets/images/bpwalters.png'
                 alt=''

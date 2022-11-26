@@ -7,15 +7,28 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
   const project = markdownRemark;
   const image = getImage(project.featuredImage);
 
+  const stackMarkup = project.frontmatter.stack?.map((s) => {
+    return (
+      <div key={`stack-${s}`} className='px-5 py-2 bg-zinc-700 rounded-3xl'>
+        {s}
+      </div>
+    );
+  });
+
   return (
     <>
       <Fade>
-        <h1 className='text-center'>{project.frontmatter.title}</h1>
-        <div className='max-w-3xl mx-auto'>
-          <GatsbyImage
-            image={image}
-            alt={project.frontmatter.title}
-          />
+        <div className='my-16 flex flex-col gap-10'>
+          <h1 className='m-0 text-center'>{project.frontmatter.title}</h1>
+          <div className='flex flex-row gap-3 justify-center'>
+            {stackMarkup}
+          </div>
+          <div className='text-center'>
+            <GatsbyImage
+              image={image}
+              alt={project.frontmatter.title}
+            />
+          </div>
         </div>
       </Fade>
       <Fade>
@@ -36,7 +49,7 @@ export const projectQuery = graphql`
       }
       featuredImage {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(width: 750)
         }
       }
     }
