@@ -24,7 +24,7 @@ const Blog = () => {
         title
         date(formatString: "MMMM D, YYYY")
       }
-      excerpt(pruneLength: 300)
+      excerpt(pruneLength: 200)
     }
   }
 }`);
@@ -50,16 +50,16 @@ const Blog = () => {
 
   const blogMarkup = loadedPosts.map((post, i) => {
     return (
-      <div key={`post-${i}`}>
+      <div key={`post-${i}`} className='p-7 bg-zinc-700 rounded-3xl flex flex-col justify-between border-box'>
         <a href={`blog` + post.fields.slug} className='no-underline'>
           <h4 className='mt-0'>{post.frontmatter.title}</h4>
         </a>
         <div className='text-sm font-light'>{post.frontmatter.date}</div>
         <p className='text-base leading-relaxed'>{post.excerpt}...</p>
         <div className='flex justify-end'>
-          <a href={`blog` + post.fields.slug} className='text-sm text-slate-300 no-underline'>
-            Read More <FontAwesomeIcon icon={faChevronRight} className='ml-1'/>
-          </a>
+          <Button href={`blog` + post.fields.slug}>
+            Read More
+          </Button>
         </div>
       </div>
     );
@@ -79,7 +79,7 @@ const Blog = () => {
         <h2>Blog</h2>
       </Fade>
       <Fade cascade>
-        <div className='flex flex-col gap-12'>
+        <div className='flex flex-col gap-7'>
           {blogMarkup}
         </div>
       </Fade>

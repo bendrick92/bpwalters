@@ -16,16 +16,16 @@ module.exports = {
             pre: {
               padding: '.3em .5em',
               borderRadius: '.5em',
-              backgroundColor: colors.slate['600'],
-              color: colors.slate['100'],
-              fontWeight: 600
+              backgroundColor: colors.zinc['600'],
+              color: colors.zinc['100'],
+              fontWeight: 400
             },
             code: {
               padding: '.3em .5em',
               borderRadius: '.5em',
-              backgroundColor: colors.slate['600'],
-              color: colors.slate['100'],
-              fontWeight: 600
+              backgroundColor: colors.zinc['600'],
+              color: colors.zinc['100'],
+              fontWeight: 400
             },
             'code::before': {
               content: '""',

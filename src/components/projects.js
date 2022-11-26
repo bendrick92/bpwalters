@@ -28,8 +28,8 @@ const Projects = () => {
   const projectsMarkup = site.projects.map((project, i) => {
     return (
       <div key={`project-${i}`} className='p-7 bg-zinc-700 rounded-3xl flex flex-col justify-between border-box'>
-        <div className='flex flex-row gap-4 items-center'>
-          <FontAwesomeIcon icon={project.frontmatter.icon} size='lg'/>
+        <div className='flex flex-row gap-3 items-center'>
+          <FontAwesomeIcon icon={project.frontmatter.icon}/>
           <h4 className='m-0'>{project.frontmatter.title}</h4>
         </div>
         <p className='text-base'>{project.frontmatter.blurb}</p>

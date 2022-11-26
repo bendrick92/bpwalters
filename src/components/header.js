@@ -17,7 +17,7 @@ const Header = () => {
 
   const desktopNavMarkup = (
     <nav className='hidden flex-row gap-8 md:flex'>
-      <AnchorLink to='/#intro' className='text-slate-300 hover:text-white z-10'>About Me</AnchorLink>
+      <AnchorLink to='/#intro' className='text-slate-300 hover:text-white z-10'>About</AnchorLink>
       <AnchorLink to='/#projects' className='text-slate-300 hover:text-white z-10'>Projects</AnchorLink>
       <AnchorLink to='/#blog' className='text-slate-300 hover:text-white z-10'>Blog</AnchorLink>
       <a href='https://github.com/bendrick92' target='_blank' rel='noreferrer' className='text-slate-300 hover:text-white'>
@@ -59,7 +59,7 @@ const Header = () => {
           onClick={() => toggleMobileNav(!showMobileNav)}
         />
         <nav className='pr-8 pl-20 flex flex-col gap-6 items-end'>
-          <AnchorLink to='/#intro' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>About Me</AnchorLink>
+          <AnchorLink to='/#intro' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>About</AnchorLink>
           <AnchorLink to='/#projects' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>Projects</AnchorLink>
           <AnchorLink to='/#blog' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>Blog</AnchorLink>
           <a href='https://github.com/bendrick92' target='_blank' rel='noreferrer' className='text-slate-300 hover:text-white'>
