@@ -42,6 +42,9 @@ module.exports = {
               maxWidth: 550,
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+          }
         ],
       },
     },

@@ -9,7 +9,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
 
   const stackMarkup = project.frontmatter.stack?.map((s) => {
     return (
-      <div key={`stack-${s}`} className='px-5 py-2 bg-zinc-700 rounded-3xl'>
+      <div key={`stack-${s}`} className='px-4 py-1 bg-zinc-700 rounded-3xl whitespace-nowrap'>
         {s}
       </div>
     );
@@ -20,7 +20,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
       <Fade>
         <div className='my-16 flex flex-col gap-10'>
           <h1 className='m-0 text-center'>{project.frontmatter.title}</h1>
-          <div className='flex flex-row gap-3 justify-center'>
+          <div className='flex flex-row flex-wrap gap-3 justify-center'>
             {stackMarkup}
           </div>
           <div className='text-center'>
