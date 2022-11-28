@@ -6,12 +6,12 @@ const Intro = () => {
   return (
     <>
       <Fade>
-        <div>
-          <p>Hi there! My name is</p>
-          <h2 className='mt-0 mb-6 text-7xl font-superbold leading-tight'>Ben Walters</h2>
-          <p>and I'm a <a href='https://linkedin.com/in/bpwalters' target='_blank' rel='noreferrer'><strong>Lead Software Engineer</strong></a> from Milwaukee, WI.</p>
-          <p>I'm also a full-time dad, part time woodworker, and sometimes tinkerer - more on that down <AnchorLink to='#projects'>here</AnchorLink>.</p>
-          <p>If you have questions about any of my work or just wanna chat, <AnchorLink to='#contact'>hit me up</AnchorLink>!</p>
+        <div className='flex flex-col gap-5'>
+          <p className='m-0'>Hi there! My name is</p>
+          <h2 className='-my-0.5 md:m-0 text-7xl font-superbold leading-tight md:leading-none'>Ben Walters</h2>
+          <p className='m-0'>and I'm a <a href='https://linkedin.com/in/bpwalters' target='_blank' rel='noreferrer'>Lead Software Engineer</a> from Milwaukee, WI.</p>
+          <p className='m-0'>I'm also a full-time dad, part time woodworker, and occasional <a href='https://benscarblog.com' target='_blank' rel='noreferrer'>car blogger</a>.</p>
+          <p className='m-0'>If you have any questions about my <AnchorLink to='#projects'>projects</AnchorLink> or are interested in working together, please <AnchorLink to='#contact'>shoot me a message</AnchorLink>!</p>
         </div>
       </Fade>
     </>

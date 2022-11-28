@@ -2,15 +2,24 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 import {Fade} from 'react-awesome-reveal';
+import {faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const BlogPostTemplate = ({ data: { markdownRemark } }) => {
   const post = markdownRemark;
   const image = getImage(post.featuredImage);
 
+  const affiliatesMarkup = post.html.includes('') && (
+    <div className='p-5 bg-zinc-600 rounded-3xl flex flex-row gap-4 items-center'>
+      <FontAwesomeIcon icon={faInfoCircle}/>
+      <div class='m-0'>Some of the Amazon links in this page may provide me with a small kickback via the Amazon Associates Program</div>
+    </div>
+  );
+
   return (
     <>
       <Fade>
-        <div className='my-16 flex flex-col gap-10'>
+        <div className='mb-16 flex flex-col gap-10'>
           <h1 className='m-0 text-center'>{post.frontmatter.title}</h1>
           <span className='text-center'>{post.frontmatter.date}</span>
           <div className='text-center'>
@@ -22,7 +31,10 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
         </div>
       </Fade>
       <Fade>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}>
+        <div className='flex flex-col items-center'>
+          {affiliatesMarkup}
+          <div dangerouslySetInnerHTML={{ __html: post.html }}>
+          </div>
         </div>
       </Fade>
     </>

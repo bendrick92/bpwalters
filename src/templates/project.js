@@ -18,7 +18,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
   return (
     <>
       <Fade>
-        <div className='my-16 flex flex-col gap-10'>
+        <div className='mb-16 flex flex-col gap-10'>
           <h1 className='m-0 text-center'>{project.frontmatter.title}</h1>
           <div className='flex flex-row flex-wrap gap-3 justify-center'>
             {stackMarkup}

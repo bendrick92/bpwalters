@@ -19,17 +19,17 @@ const Contact = () => {
               id='email'
               type='email'
               name='email'
-              placeholder='bender@planetexpress.com'
+              placeholder='you@email.com'
               required
-              className='block rounded-md bg-black text-white border-transparent focus:bg-white focus:text-zinc-500 focus:border-none'
+              className='block rounded-md bg-black text-zinc-100 border-transparent focus:bg-white focus:text-zinc-500 focus:border-none'
             />
             <textarea
               id='message'
               name='message'
-              placeholder={`Did you hear the one about the farmer who's cow wouldn't give any milk? It was udderly ridiculous.`}
+              placeholder={`What's on your mind?`}
               required
               rows={5}
-              className='block rounded-md bg-black text-white border-transparent focus:bg-white focus:text-zinc-500 focus:border-none'
+              className='block rounded-md bg-black text-zinc-100 border-transparent focus:bg-white focus:text-zinc-500 focus:border-none'
             />
             <div className='flex justify-end'>
               <Button

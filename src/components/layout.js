@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO/>
-      <div id='page-wrapper' className='min-h-full pt-20 bg-zinc-900 text-white flex'>
+      <div id='page-wrapper' className='min-h-full pt-40 bg-zinc-900 text-white flex'>
         <div id='page-content' className='max-w-full md:max-w-5xl px-8 mx-auto grow flex flex-col'>
           <Header/>
           <main className='min-w-full w-full grow prose prose-slate dark:prose-invert'>

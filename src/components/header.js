@@ -58,7 +58,7 @@ const Header = () => {
           className='px-8 py-6 hover:cursor-pointer'
           onClick={() => toggleMobileNav(!showMobileNav)}
         />
-        <nav className='pr-8 pl-20 flex flex-col gap-6 items-end'>
+        <nav className='pr-8 pl-20 flex flex-col gap-8 items-end text-xl'>
           <AnchorLink to='/#intro' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>About</AnchorLink>
           <AnchorLink to='/#projects' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>Projects</AnchorLink>
           <AnchorLink to='/#blog' className='text-slate-300 hover:text-white z-10' onAnchorLinkClick={() => toggleMobileNav(!showMobileNav)}>Blog</AnchorLink>
