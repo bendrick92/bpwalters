@@ -7,7 +7,7 @@ import Button from './button';
 const Projects = () => {
   const { site } = useStaticQuery(graphql`{
   site: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(projects)/"}}
+    filter: {fileAbsolutePath: {regex: "^/(\/projects)/"}}
     sort: {frontmatter: {sort: ASC}}
   ) {
     projects: nodes {

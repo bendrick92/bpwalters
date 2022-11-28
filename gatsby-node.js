@@ -66,10 +66,20 @@ exports.onCreateNode = async ({ node, actions, createNodeId, getNode, getCache }
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   await buildBlogPosts(graphql, createPage);
   await buildProjects(graphql, createPage);
+
+  createRedirect({
+    fromPath: '/projects/',
+    toPath: '/'
+  });
+
+  createRedirect({
+    fromPath: '/blog/',
+    toPath: '/'
+  });
 };
 
 const buildBlogPosts = async (graphql, createPage) => {
@@ -77,7 +87,7 @@ const buildBlogPosts = async (graphql, createPage) => {
 
   let searchResults = await graphql(`{
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(blog)/"}}
+      filter: {fileAbsolutePath: {regex: "^/(\/blog)/"}}
       sort: {frontmatter: {date: DESC}}
       limit: 1000
     ) {
@@ -112,7 +122,7 @@ const buildProjects = async (graphql, createPage) => {
 
   let searchResults = await graphql(`{
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(projects)/"}}
+      filter: {fileAbsolutePath: {regex: "^/(\/projects)/"}}
       sort: {frontmatter: {date: DESC}}
       limit: 1000
     ) {

@@ -13,7 +13,7 @@ const Blog = () => {
 
   const { markdown } = useStaticQuery(graphql`{
   markdown: allMarkdownRemark(
-    filter: {frontmatter: {type: {eq: "blog"}}}
+    filter: {fileAbsolutePath: {regex: "^/(\/blog)/"}}
     sort: {frontmatter: {date: DESC}}
   ) {
     posts: nodes {

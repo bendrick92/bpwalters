@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
   const affiliatesMarkup = post.html.includes('') && (
     <div className='p-5 bg-zinc-600 rounded-3xl flex flex-row gap-4 items-center'>
       <FontAwesomeIcon icon={faInfoCircle}/>
-      <div class='m-0'>Some of the Amazon links in this page may provide me with a small kickback via the Amazon Associates Program</div>
+      <div className='m-0'>Some of the Amazon links in this page may provide me with a small kickback via the Amazon Associates Program</div>
     </div>
   );
 
@@ -31,9 +31,9 @@ const BlogPostTemplate = ({ data: { markdownRemark } }) => {
         </div>
       </Fade>
       <Fade>
-        <div className='flex flex-col items-center'>
+        <div className='max-w-full flex flex-col items-center'>
           {affiliatesMarkup}
-          <div dangerouslySetInnerHTML={{ __html: post.html }}>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} className='max-w-full'>
           </div>
         </div>
       </Fade>

@@ -29,6 +29,7 @@
     "gatsby": "^5.0.1",
     "gatsby-cli": "^5.0.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-gatsby-cloud": "^5.2.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.1.0",
     "gatsby-plugin-mdx": "^5.0.0",
