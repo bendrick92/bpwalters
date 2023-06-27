@@ -2,7 +2,7 @@
 title: "obdPi"
 featuredImage: https://assets.bpwalters.com/images/obdpi.jpg
 stack: ["Python", "Raspberry Pi", "Telematics"]
-sort: 1
+sort: 2
 icon: "gauge"
 blurb: "Raspberry Pi carputer sending OBD-II data to a 16x2 OLED display"
 ---

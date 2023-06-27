@@ -2,7 +2,7 @@
 title: "catPi"
 featuredImage: https://assets.bpwalters.com/images/catpi.jpg
 stack: ["Python", "Raspberry Pi"]
-sort: 2
+sort: 3
 icon: "cat"
 blurb: "Raspberry Pi cloud-enabled cat feeder"
 ---

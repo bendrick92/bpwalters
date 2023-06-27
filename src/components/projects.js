@@ -45,11 +45,11 @@ const Projects = () => {
   return (
     <>
       <div className='flex flex-row'>
-        <Fade>
+        <Fade triggerOnce>
           <h2>Projects</h2>
         </Fade>
       </div>
-      <Fade cascade>
+      <Fade cascade triggerOnce>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-7'>
           {projectsMarkup}
         </div>

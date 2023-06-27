@@ -6,7 +6,7 @@ import Button from './button';
 
 const Contact = () => {
   return (
-    <Fade>
+    <Fade triggerOnce>
       <div className='max-w-2xl mx-auto'>
         <h2>Lets chat!</h2>
         <form

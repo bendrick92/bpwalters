@@ -75,10 +75,10 @@ const Blog = () => {
 
   return (
     <>
-      <Fade>
+      <Fade triggerOnce>
         <h2>Blog</h2>
       </Fade>
-      <Fade cascade>
+      <Fade cascade triggerOnce>
         <div className='flex flex-col gap-7'>
           {blogMarkup}
         </div>
