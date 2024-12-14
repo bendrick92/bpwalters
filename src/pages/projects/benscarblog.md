@@ -1,6 +1,6 @@
 ---
 title: "Bens Car Blog"
-featuredImage: https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot_2020.png
+featuredImage: https://assets.bpwalters.com/images/benscarblog_2024.png
 stack: ["Jekyll"]
 sort: 5
 icon: "car-side"
